@@ -1,0 +1,78 @@
+:root {
+  --bg: #0b0a0d;
+  --bg-raised: #131217;
+  --line: rgba(242, 240, 234, 0.1);
+  --line-strong: rgba(242, 240, 234, 0.22);
+  --ink: #f2f0ea;
+  --ink-dim: #a8a5a0;
+  --ink-faint: #6f6c68;
+  --amber: #d9a441;
+  --amber-dim: rgba(217, 164, 65, 0.14);
+  --sage: #5b6b63;
+  --danger: #c7554a;
+  --danger-dim: rgba(199, 85, 74, 0.14);
+
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--amber-dim);
+  color: var(--amber);
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* focus visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 1.5px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

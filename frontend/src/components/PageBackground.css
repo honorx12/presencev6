@@ -1,0 +1,16 @@
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.page-bg-layer,
+.page-bg-scrim {
+  position: absolute;
+  inset: 0;
+}
+.app-content {
+  position: relative;
+  z-index: 1;
+}

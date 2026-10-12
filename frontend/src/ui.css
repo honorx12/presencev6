@@ -1,0 +1,188 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  border-radius: 2px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-amber {
+  background: var(--amber);
+  color: #1a1305;
+}
+.btn-amber:hover:not(:disabled) {
+  background: #e6b666;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+.btn-outline:hover:not(:disabled) {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-dim);
+}
+.btn-ghost:hover:not(:disabled) {
+  color: var(--ink);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.field label {
+  font-size: 12.5px;
+  color: var(--ink-dim);
+  letter-spacing: 0.02em;
+}
+.field input[type='text'],
+.field input[type='password'],
+.field input[type='date'],
+.field input[type='tel'],
+.field select {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 11px 14px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  border-radius: 2px;
+}
+.field input[type='text']:focus,
+.field input[type='password']:focus,
+.field input[type='date']:focus,
+.field input[type='tel']:focus,
+.field select:focus {
+  border-color: var(--amber);
+  outline: none;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  text-transform: capitalize;
+}
+.status-present {
+  background: var(--sage-dim, rgba(120, 180, 120, 0.15));
+  color: var(--sage);
+}
+.status-absent {
+  background: var(--danger-dim, rgba(220, 80, 80, 0.15));
+  color: var(--danger);
+}
+
+.card {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  padding: 28px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 3px 9px;
+  border-radius: 2px;
+  letter-spacing: 0.01em;
+}
+.badge-match {
+  background: var(--amber-dim);
+  color: var(--amber);
+}
+.badge-unknown {
+  background: var(--danger-dim);
+  color: var(--danger);
+}
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+.table th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--ink-faint);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  padding: 0 16px 12px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+}
+.table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  color: var(--ink);
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.empty-state {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 13.5px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--line-strong);
+  border-top-color: var(--amber);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.alert {
+  padding: 12px 16px;
+  font-size: 13.5px;
+  border: 1px solid;
+}
+.alert-error {
+  background: var(--danger-dim);
+  border-color: rgba(199, 85, 74, 0.35);
+  color: #e39189;
+}
+.alert-success {
+  background: var(--amber-dim);
+  border-color: rgba(217, 164, 65, 0.35);
+  color: var(--amber);
+}

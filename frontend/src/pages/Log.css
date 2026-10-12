@@ -1,0 +1,115 @@
+.date-select {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 10px 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  border-radius: 2px;
+  color-scheme: dark;
+}
+
+.log-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.log-stat {
+  flex: 1;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.log-stat-value {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.log-stat-label {
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+}
+
+.log-stat-present .log-stat-value {
+  color: var(--sage);
+}
+.log-stat-absent .log-stat-value {
+  color: var(--danger);
+}
+
+.log-table td,
+.log-table th {
+  vertical-align: middle;
+}
+
+.log-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink-dim);
+  margin-right: 18px;
+  cursor: pointer;
+}
+.log-radio input {
+  accent-color: var(--amber);
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.log-radio input:disabled {
+  cursor: not-allowed;
+}
+
+.log-row-dirty td {
+  background: var(--amber-dim);
+}
+
+.log-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.wa-panel {
+  margin-top: 16px;
+  max-width: 480px;
+}
+.wa-panel label {
+  display: block;
+  font-size: 12.5px;
+  color: var(--ink-dim);
+  margin-bottom: 8px;
+}
+.wa-panel-row {
+  display: flex;
+  gap: 10px;
+}
+.wa-panel-row input {
+  flex: 1;
+}
+.wa-panel-note {
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+
+.history-filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.history-filters .field {
+  min-width: 200px;
+}

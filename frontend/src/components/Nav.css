@@ -1,0 +1,80 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(11, 10, 13, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.nav-brand-mark {
+  width: 9px;
+  height: 9px;
+  background: var(--amber);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--amber-dim);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 13.5px;
+  color: var(--ink-dim);
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--ink);
+}
+
+.nav-link.active {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+  text-transform: capitalize;
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    gap: 16px;
+  }
+  .nav-role {
+    display: none;
+  }
+}

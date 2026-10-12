@@ -1,0 +1,15 @@
+# Alternative to Railway: Render blueprint (New + > Blueprint).
+services:
+  - type: web
+    name: presence-api
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: ALLOWED_ORIGIN_REGEX
+        value: https://.*\.vercel\.app

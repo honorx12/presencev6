@@ -1,0 +1,18 @@
+# Everything face_recognition needs EXCEPT face_recognition itself.
+# face_recognition pulls source-built `dlib` (needs cmake + 10 min compile, fails on most hosts).
+# `dlib-bin` = same dlib, prebuilt wheel. Install face_recognition on top with --no-deps:
+#   pip install -r requirements.txt && pip install --no-deps face_recognition
+# (Dockerfile does this for you.)
+setuptools<81
+dlib-bin
+face_recognition_models
+Click
+numpy
+pillow
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+supabase
+python-dotenv
+openpyxl

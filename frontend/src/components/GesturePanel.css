@@ -1,0 +1,22 @@
+.gp { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+.gp-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.gp-switch { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; }
+.gp-pill { font-family: 'IBM Plex Mono', monospace; font-size: 11px; padding: 3px 8px; border: 1px solid var(--line); color: var(--ink-faint); }
+.gp-pill.ok { color: #3ddc84; border-color: #3ddc8466; }
+.gp-pill.warn { color: var(--amber); border-color: var(--amber); }
+.gp-pill.bad { color: #ff6b6b; border-color: #ff6b6b66; }
+.gp-status { font-size: 13px; line-height: 1.5; padding: 9px 12px; border: 1px solid var(--line); background: var(--bg-raised); color: var(--ink); }
+.gp-status.locked { border-color: #38bdf8; background: rgba(56, 189, 248, .08); }
+.gp-help { margin: 0; padding-left: 18px; font-size: 12.5px; line-height: 1.6; color: var(--ink-faint); }
+.gp-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.gp-label { font-size: 12px; color: var(--ink-faint); letter-spacing: .04em; text-transform: uppercase; min-width: 74px; }
+.gp-select, .gp-input { background: var(--bg-raised); color: var(--ink); border: 1px solid var(--line); padding: 8px 10px; font: inherit; font-size: 13px; }
+.gp-input { flex: 1; min-width: 150px; font-family: 'IBM Plex Mono', monospace; }
+.gp-check { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; cursor: pointer; }
+.gp-pad { display: grid; grid-template-columns: repeat(3, 34px); grid-template-rows: repeat(3, 30px); gap: 3px; }
+.gp-pad button { background: var(--bg-raised); color: var(--ink); border: 1px solid var(--line); font-size: 15px; cursor: pointer; padding: 0; }
+.gp-pad button:hover { border-color: var(--amber); color: var(--amber); }
+.gp-up { grid-column: 2; grid-row: 1; } .gp-left { grid-column: 1; grid-row: 2; } .gp-right { grid-column: 3; grid-row: 2; } .gp-down { grid-column: 2; grid-row: 3; }
+.gp-err { font-size: 12.5px; padding: 8px 10px; border: 1px solid #ff6b6b66; background: rgba(255, 107, 107, .08); color: #ffb3b3; }
+.gp-note { font-size: 12.5px; color: var(--ink-faint); }
+.gp-note code { font-family: 'IBM Plex Mono', monospace; color: var(--ink); }

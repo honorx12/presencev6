@@ -1,0 +1,73 @@
+.capture {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.capture-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.capture-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scaleX(-1);
+}
+
+.capture-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--ink-faint);
+  font-size: 13px;
+  padding: 24px;
+  text-align: center;
+}
+
+.capture-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--amber);
+  opacity: 0.85;
+}
+.capture-corner.tl {
+  top: 8px;
+  left: 8px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+.capture-corner.tr {
+  top: 8px;
+  right: 8px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+}
+.capture-corner.bl {
+  bottom: 8px;
+  left: 8px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+}
+.capture-corner.br {
+  bottom: 8px;
+  right: 8px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+.capture-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
